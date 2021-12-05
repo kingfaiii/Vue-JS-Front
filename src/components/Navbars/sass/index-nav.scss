@@ -1,0 +1,15 @@
+@import '../../../assets/sass/mixins.scss';
+.navbar {
+	&.is-transparent {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+
+	.navbar-end {
+		font-size: 20px;
+
+		button {
+			border: none !important;
+		}
+	}
+}

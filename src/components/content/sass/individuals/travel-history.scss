@@ -1,0 +1,81 @@
+@import '../../../../assets/sass/mixins.scss';
+
+.travel-container {
+	width: auto;
+	.columns-error {
+		font-size: 30px;
+		margin: 100px !important;
+		font-weight: bold;
+	}
+
+	.travel-columns {
+		.slide-enter-active,
+		.slide-leave-active {
+			transition: transform 0.3s ease;
+		}
+
+		.slide-enter,
+		.slide-leave-to {
+			transform: translateX(100%);
+			transition: all 120ms ease-in 0s;
+		}
+
+		.card:hover {
+			-webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+			-moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+			box-shadow: 3px 3px 5px 6px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+		}
+
+		padding: 15px !important;
+		.select-labels {
+			font-weight: bold !important;
+		}
+		.menu-label {
+			font-weight: bolder !important;
+			color: #555f61;
+			font-size: 25px;
+		}
+
+		.reset-button {
+			border: 1px solid hsl(171, 100%, 41%) !important;
+		}
+
+		.reset-button:hover {
+			color: $primary;
+			font-weight: bold;
+			background-color: hsl(171, 100%, 41%) !important;
+		}
+
+		.travel-log {
+			display: block !important;
+			overflow-y: auto !important;
+
+			height: 300px !important;
+
+			tbody tr td {
+				padding: 13px;
+			}
+
+			.table tbody tr:nth-child(even) {
+				background-color: hsl(0, 0%, 95%);
+			}
+
+			.table tbody tr:hover {
+				background-color: hsl(171, 100%, 41%) !important;
+				font-weight: bold;
+			}
+
+			.table thead th:hover {
+				background-color: none !important;
+			}
+		}
+
+		.choose-panel {
+			font-size: 18px;
+
+			a {
+				color: $primary !important;
+			}
+		}
+	}
+}

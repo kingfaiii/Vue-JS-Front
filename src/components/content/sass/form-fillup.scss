@@ -1,0 +1,72 @@
+@import '../../../assets/sass/mixins.scss';
+
+.column-card {
+	align-items: center;
+	justify-content: center;
+	display: flex !important;
+
+	.has-equal-height {
+		border: none !important;
+		box-shadow: none;
+		width: 700px !important;
+		flex-direction: column !important;
+		height: 600px !important;
+		overflow-y: auto;
+		.text-welcome {
+			font-size: 28px;
+		}
+
+		.media-image {
+			padding: 0px !important;
+			margin: 0 !important;
+
+			.image {
+				display: flex;
+
+				img {
+					flex-shrink: 0;
+					image-rendering: auto;
+					image-rendering: crisp-edges;
+					image-rendering: pixelated;
+				}
+			}
+		}
+
+		.columns-img {
+			padding: 0px !important;
+			border-bottom: 1px solid;
+			img {
+				border-bottom: 1px solid black;
+			}
+
+		img:hover {
+				border: 5px solid $primary !important;
+				cursor: pointer !important;
+				opacity: 40% !important;
+			}
+		}
+	}
+}
+
+@include sm {
+	column-card {
+		padding: 0 !important;
+		margin: 0 !important;
+		align-items: center;
+		justify-content: center;
+		display: flex !important;
+
+		.has-equal-height {
+			border: 0 !important;
+			box-shadow: none;
+			display: flex !important;
+			width: 500px !important;
+			flex-direction: column !important;
+			height: 100% !important;
+		}
+
+		.has-equal-height .card-footer {
+			margin-top: auto !important;
+		}
+	}
+}

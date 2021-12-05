@@ -1,0 +1,81 @@
+@import '../../../assets/sass/mixins.scss';
+
+.personal-info-container {
+	// position: relative;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column !important;
+	box-shadow: none;
+	.media-content {
+		overflow-x: hidden;
+		overflow-y: auto !important;
+
+		height: 400px;
+
+		.profile-photo {
+			height: 100px !important;
+			width: 100px !important;
+			object-fit: cover !important;
+		}
+
+		.profile-photo:hover {
+			border: 1px solid $primary !important;
+			cursor: pointer;
+			opacity: 70%;
+		}
+	}
+
+	.box-title {
+		margin-top: 0px;
+		padding-bottom: 20px;
+	}
+	.is-horizontal-center {
+		justify-content: center !important;
+	}
+
+	.field .control input {
+		border-top-style: hidden;
+		border-right-style: hidden;
+		border-left-style: hidden;
+		border-bottom: 1px solid $primary !important;
+		box-shadow: none;
+	}
+
+	input:focus {
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+
+@include xsm {
+	.personal-info-container {
+		position: relative;
+		width: auto;
+		font-size: 10px;
+		height: auto;
+	}
+}
+
+@include sm {
+	.personal-info-container {
+		position: relative;
+		width: auto;
+		height: auto;
+	}
+}
+
+@include md {
+	.personal-info-container {
+		width: auto;
+		height: auto;
+	}
+}
+
+@include lg {
+	.personal-info-container {
+		width: auto;
+		height: auto;
+	}
+}

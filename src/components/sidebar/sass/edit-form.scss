@@ -1,0 +1,146 @@
+@import '../../../assets/sass/mixins.scss';
+
+.sidebar-edit {
+	min-height: 120vh;
+	border-left: 1px solid $primary;
+	border-top: 1px solid $primary;
+	border-bottom: 1px solid $primary;
+	display: flex;
+	flex-direction: column;
+	right: 0 !important;
+	overflow: hidden !important;
+
+	.slide-enter-active,
+	.slide-leave-active {
+		transition: width 0.3s ease;
+	}
+
+	.slide-enter,
+	.slide-leave-to {
+		transform: translateY(100%);
+		transition: all 120ms ease-in 0s;
+	}
+
+	.edit-container {
+		.edit-header {
+			font-size: 20px !important;
+			left: 0 !important;
+		}
+
+		.edit-icon {
+			height: 1em !important;
+		}
+
+		.edit-tabs {
+			margin: 0;
+			padding: 0;
+
+			.personal-divider {
+				border-right: 1px solid $primary;
+			}
+
+			li a {
+				font-weight: bold !important;
+			}
+		}
+	}
+
+	.active-button a {
+		color: hsl(171, 100%, 41%) !important;
+	}
+}
+
+@include xsm {
+	.sidebar-edit {
+		width: auto;
+		height: auto;
+
+		font-size: 10px;
+		.edit-container {
+			position: relative;
+
+			.edit-header {
+				position: relative;
+				left: auto;
+			}
+
+			.edit-icon {
+				height: 1em !important;
+			}
+		}
+	}
+}
+
+@include sm {
+	.sidebar-edit {
+		width: auto;
+		height: auto;
+		.edit-container {
+			.edit-header {
+				position: relative;
+				left: auto;
+			}
+			.edit-icon {
+				height: 1em !important;
+			}
+		}
+	}
+}
+
+@include md {
+	.sidebar-edit {
+		width: auto;
+		height: auto;
+		.edit-container {
+			margin: 0;
+			padding: 0;
+			min-height: 700px;
+
+			.edit-header {
+				position: relative;
+				left: auto;
+			}
+
+			.edit-icon {
+				height: 1em !important;
+			}
+		}
+	}
+}
+
+@include lg {
+	.sidebar-edit {
+		width: auto;
+		height: auto;
+		.edit-container {
+			margin: 0;
+			padding: 0;
+
+			.edit-header {
+				position: relative;
+				left: auto;
+			}
+
+			.edit-icon {
+				height: 1em !important;
+			}
+		}
+	}
+}
+
+@include xl {
+	.sidebar-edit {
+		width: auto;
+		height: auto;
+		.edit-container {
+			.edit-header {
+				position: relative;
+				left: auto;
+			}
+
+			.edit-icon {
+				height: 1em !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+@import '../../../assets/sass/mixins.scss';
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: transform 0.2s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+	transform: translateX(100%);
+	transition: all 50ms ease-in 0s;
+}
+
+.edit-form-panel {
+	position: fixed;
+	height: auto;
+	top: 0;
+	left: auto;
+	z-index: auto;
+	right: 0;
+	width: auto;
+	min-width: 83%;
+}
+
+.users-profile {
+	width: 40% !important;
+	position: fixed;
+	right: 0 !important;
+	height: 100% !important;
+	-webkit-box-shadow: 1px 1px 1px 1px$primary; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	-moz-box-shadow: 1px 1px 1px 1px $primary; /* Firefox 3.5 - 3.6 */
+	box-shadow: 3px 3px 3px 3px $primary; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	overflow: hidden;
+	z-index: 1 !important;
+
+	.card {
+		height: 100% !important;
+		display: flex !important;
+		flex-direction: column !important;
+
+		.profile-photo:hover {
+			border: 1px solid $primary !important;
+			cursor: pointer;
+
+			opacity: 70%;
+		}
+
+		.card-header {
+			box-shadow: none !important;
+			text-decoration: underline;
+		}
+
+		.card-content {
+			margin-top: 0 !important;
+			flex-grow: 1;
+			overflow-y: auto;
+
+			img {
+				height: 100px;
+				width: 100px;
+				object-fit: cover;
+			}
+
+			.button-sidebar {
+				border: 1px solid hsl(171, 100%, 41%);
+				color: $primary !important;
+			}
+
+			.button-sidebar:hover {
+				font-weight: bold;
+				color: black !important;
+				background-color: hsl(171, 100%, 41%);
+			}
+
+			.columns-information {
+				border-bottom: 1px solid $primary;
+				border-bottom-style: dotted;
+			}
+		}
+
+		.card-footer {
+			margin-top: 0 !important;
+
+			strong {
+				color: $primary !important;
+			}
+
+			a:hover {
+				background-color: hsl(171, 100%, 41%);
+
+				strong {
+					color: black !important;
+				}
+			}
+		}
+	}
+}
+
+@include xsm {
+	.users-profile {
+		width: auto !important;
+	}
+}
+
+@include sm {
+	.users-profile {
+		width: auto !important;
+	}
+}
+
+@include md {
+	.users-profile {
+		width: auto !important;
+	}
+}
+
+@include lg {
+	.users-profile {
+		width: auto !important;
+	}
+}
